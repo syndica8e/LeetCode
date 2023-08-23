@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
     public int maxProfit(int[] prices) {
-        int max_profit = 0;
+        int max_profit = 0; // test case : [ 2,4,1]
         for ( int i =0 ; i< prices.length;i++){
             for(int j =i+1;j<prices.length;j++){
                 int profit = prices[j] - prices[i];
@@ -15,7 +15,7 @@ class Solution {
                     max_profit = profit;
                 }
             }
-        }return max_profit;
+        }return max_profit; //Time limit exceeded = O(n2)
 }
 }
 // @lc code=end
